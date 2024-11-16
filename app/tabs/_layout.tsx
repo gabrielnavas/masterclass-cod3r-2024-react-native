@@ -1,11 +1,14 @@
 import { Ionicons } from "@expo/vector-icons"
-import { Tabs } from "expo-router"
+import { DrawerActions } from "@react-navigation/native"
+import { Tabs, useNavigation } from "expo-router"
 
 type Props = {
 
 }
 
 export default function Layout(props: Props) {
+
+  const nav = useNavigation()
 
   function icone(nome: any) {
     return (props: any) =>
@@ -43,6 +46,19 @@ export default function Layout(props: Props) {
         options={{
           title: 'Configurações',
           tabBarIcon: icone('settings-outline')
+        }}
+      />
+       <Tabs.Screen
+        name="mais"
+        options={{
+          title: 'mais Opções',
+          tabBarIcon: icone('menu')
+        }}
+        listeners={{
+          tabPress: e => {
+            e.preventDefault()
+            nav.dispatch(DrawerActions.openDrawer)
+          }
         }}
       />
     </Tabs>
