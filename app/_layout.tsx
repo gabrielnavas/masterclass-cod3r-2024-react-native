@@ -80,6 +80,20 @@ export default function RootLayout() {
                 )
               }}
             />
+             <Drawer.Screen
+              name='stack'
+              options={{
+                drawerLabel: 'Stack',
+                title: 'Stack Inicial',
+                drawerIcon: () => (
+                  <Ionicons
+                    name='logo-stackoverflow'
+                    size={18}
+                    color='#3a98ff'
+                  />
+                )
+              }}
+            />
           </Drawer>
         </GestureHandlerRootView>
 
