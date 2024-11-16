@@ -6,6 +6,18 @@ type Props = {
 }
 
 export default function Layout(props: Props) {
+
+  function icone(nome: any) {
+    return (props: any) =>
+      <Ionicons
+        name={nome}
+        size={18}
+        color={props.focused
+          ? '#3a98FF'
+          : '#000'}
+      />
+  }
+
   return (
     <Tabs
       screenOptions={{
@@ -13,17 +25,24 @@ export default function Layout(props: Props) {
       }}
     >
       <Tabs.Screen
-
         name="index"
         options={{
           title: 'Home',
-          tabBarIcon: () => (
-            <Ionicons
-              name='home-outline'
-              size={18}
-              color='#884499'
-            />
-          )
+          tabBarIcon: icone('home-outline')
+        }}
+      />
+      <Tabs.Screen
+        name="cursos"
+        options={{
+          title: 'Cursos',
+          tabBarIcon: icone('play-circle-outline')
+        }}
+      />
+      <Tabs.Screen
+        name="config"
+        options={{
+          title: 'Configurações',
+          tabBarIcon: icone('settings-outline')
         }}
       />
     </Tabs>
