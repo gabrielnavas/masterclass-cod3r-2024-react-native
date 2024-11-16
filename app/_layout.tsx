@@ -11,63 +11,77 @@ export default function RootLayout() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
-      <StatusBar
+        <StatusBar
           animated={true}
           backgroundColor="#222F"
           barStyle='default'
           showHideTransition='fade'
           hidden={false}
         />
-      <GestureHandlerRootView style={{ flex: 1 }}>
-        <Drawer
-          screenOptions={{
-            swipeEdgeWidth: 100
-          }}
-        >
-          <Drawer.Screen
-            name='index'
-            options={{
-              drawerLabel: 'Início',
-              title: 'Bem vindo',
-              drawerIcon: () => (
-                <Ionicons
-                  name='home-outline'
-                  size={18}
-                  color='#3a98ff'
-                />
-              )
+        <GestureHandlerRootView style={{ flex: 1 }}>
+          <Drawer
+            screenOptions={{
+              swipeEdgeWidth: 100
             }}
-          />
-          <Drawer.Screen
-            name='primeiro'
-            options={{
-              drawerLabel: 'Primeiro',
-              title: 'Primeiro Oh Yeha',
-              drawerIcon: () => (
-                <Ionicons
-                  name='heart-circle-outline'
-                  size={18}
-                  color='#3a98ff'
-                />
-              )
-            }}
-          />
-          <Drawer.Screen
-            name='contador'
-            options={{
-              drawerLabel: 'Contador',
-              title: 'Contador',
-              drawerIcon: () => (
-                <Ionicons
-                  name='heart-circle-outline'
-                  size={18}
-                  color='#3a98ff'
-                />
-              )
-            }}
-          />
-        </Drawer>
-      </GestureHandlerRootView>
+          >
+            <Drawer.Screen
+              name='index'
+              options={{
+                drawerLabel: 'Início',
+                title: 'Bem vindo',
+                drawerIcon: () => (
+                  <Ionicons
+                    name='home-outline'
+                    size={18}
+                    color='#3a98ff'
+                  />
+                )
+              }}
+            />
+            <Drawer.Screen
+              name='primeiro'
+              options={{
+                drawerLabel: 'Primeiro',
+                title: 'Primeiro Oh Yeha',
+                drawerIcon: () => (
+                  <Ionicons
+                    name='heart-circle-outline'
+                    size={18}
+                    color='#3a98ff'
+                  />
+                )
+              }}
+            />
+            <Drawer.Screen
+              name='contador'
+              options={{
+                drawerLabel: 'Contador',
+                title: 'Contador',
+                drawerIcon: () => (
+                  <Ionicons
+                    name='add'
+                    size={18}
+                    color='#3a98ff'
+                  />
+                )
+              }}
+            />
+            <Drawer.Screen
+              name='tabs'
+              options={{
+                drawerLabel: 'Tabs',
+                title: 'Tab Inicial',
+                drawerIcon: () => (
+                  <Ionicons
+                    name='albums-outline'
+                    size={18}
+                    color='#3a98ff'
+                  />
+                )
+              }}
+            />
+          </Drawer>
+        </GestureHandlerRootView>
 
       </SafeAreaView>
     </SafeAreaProvider>
