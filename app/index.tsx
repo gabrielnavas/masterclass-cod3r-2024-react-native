@@ -2,13 +2,11 @@ import Botao from '@/components/Botao';
 import styles from '@/constants/styles';
 import { Ionicons } from '@expo/vector-icons';
 import React, { useEffect } from 'react'
-import { Alert, Text, View } from "react-native";
+import { Text, View } from "react-native";
 
 import { useNavigation } from 'expo-router'
 import { DrawerActions } from '@react-navigation/native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import Toast from 'react-native-toast-message'
 import { dizerOla } from '@/services/dizer-ola';
 
 export default function TelaInicial() {

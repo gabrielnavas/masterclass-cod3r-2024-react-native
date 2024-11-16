@@ -6,7 +6,6 @@ import { Drawer } from 'expo-router/drawer'
 import { Ionicons } from '@expo/vector-icons'
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { SafeAreaView, StatusBar, StyleSheet } from 'react-native';
-import Toast from 'react-native-toast-message';
 
 export default function RootLayout() {
   return (
@@ -113,7 +112,6 @@ export default function RootLayout() {
         </GestureHandlerRootView>
 
       </SafeAreaView>
-      <Toast />
     </SafeAreaProvider>
   );
 }
