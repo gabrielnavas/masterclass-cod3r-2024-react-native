@@ -5,7 +5,7 @@ import { Text, View } from "react-native";
 
 export default function TelaInicial() {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { gap: 10 }]}>
       <Text>Stack inicial</Text>
       <Botao>
         <Link
