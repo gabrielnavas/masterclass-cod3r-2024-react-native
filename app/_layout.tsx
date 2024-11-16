@@ -6,6 +6,7 @@ import { Drawer } from 'expo-router/drawer'
 import { Ionicons } from '@expo/vector-icons'
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { SafeAreaView, StatusBar, StyleSheet } from 'react-native';
+import Toast from 'react-native-toast-message';
 
 export default function RootLayout() {
   return (
@@ -80,7 +81,7 @@ export default function RootLayout() {
                 )
               }}
             />
-             <Drawer.Screen
+            <Drawer.Screen
               name='stack'
               options={{
                 drawerLabel: 'Stack',
@@ -94,10 +95,25 @@ export default function RootLayout() {
                 )
               }}
             />
+            <Drawer.Screen
+              name='formulario'
+              options={{
+                drawerLabel: 'Formulário',
+                title: 'Formulário',
+                drawerIcon: () => (
+                  <Ionicons
+                    name='checkbox-outline'
+                    size={18}
+                    color='#3a98ff'
+                  />
+                )
+              }}
+            />
           </Drawer>
         </GestureHandlerRootView>
 
       </SafeAreaView>
+      <Toast />
     </SafeAreaProvider>
   );
 }
